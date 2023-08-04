@@ -1,7 +1,8 @@
 import axios from "axios"
 import { useSelector } from "react-redux"
 
-const BASE_URL = "http://localhost:5000/api";
+// const BASE_URL = "http://localhost:5000/api";
+const BASE_URL = "https://fullstack-e-commerce-iw4x.onrender.com/api";
 
 
 

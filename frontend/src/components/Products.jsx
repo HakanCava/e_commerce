@@ -19,8 +19,11 @@ const Products = ({ cat, filters, sort }) => {
       try {
         const res = await axios.get(
           cat
-            ? `http://localhost:5000/api/products?category=${cat}`
-            : "http://localhost:5000/api/products"
+            ? `https://fullstack-e-commerce-iw4x.onrender.com/api/products?category=${cat}`
+            : "https://fullstack-e-commerce-iw4x.onrender.com/api/products"
+          // cat
+          //   ? `http://localhost:5000/api/products?category=${cat}`
+          //   : "http://localhost:5000/api/products"
         );
         console.log(res.data);
         setProducts(res.data);
