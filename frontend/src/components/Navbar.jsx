@@ -49,6 +49,7 @@ ${mobile({ width: "250px", padding: "0", margin: "20px 0" })}
 `;
 
 const Logo = styled(Title)`
+  cursor: pointer;
   ${laptop({ fontSize: "24px", marginLeft: "5px" })}
   ${tablet({ fontSize: "14px", marginLeft: "5px", fontWeight: 500 })}
 ${mobile({ fontSize: "14px", marginLeft: "5px", fontWeight: 500 })}
@@ -64,7 +65,7 @@ const Navbar = () => {
   const { products } = useSelector((state) => state.cart);
   const { currentUser } = useSelector((state) => state.auth);
   const { logout } = useAuthCalls();
-  const navigate=useNavigate()
+  const navigate = useNavigate();
 
   const handleClick = () => {
     logout();
@@ -73,7 +74,7 @@ const Navbar = () => {
     <ContainerNav>
       <Wrapper>
         <Left>
-          <Logo onClick={()=>navigate("/")}>MyBazaarCava</Logo>
+          <Logo onClick={() => navigate("/")}>MyBazaarCava</Logo>
         </Left>
 
         <Center>
