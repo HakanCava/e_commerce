@@ -136,7 +136,7 @@ const Cart = () => {
       <Wrapper>
         <TitleCart>YOUR BAG</TitleCart>
         <Top>
-          <TopButton>CONTINUE SHOPPING</TopButton>
+          <TopButton onClick={()=>navigate("/")}>CONTINUE SHOPPING</TopButton>
           <TopTexts>
             <TopText>Shopping Bag(2)</TopText>
             <TopText>Your Wishlist (0)</TopText>
