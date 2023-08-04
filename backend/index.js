@@ -35,20 +35,20 @@ const productRoute = require("./routes/product");
 app.use("/api/products", productRoute);
 
 //? Cart
-const cartRoute = require('./routes/cart')
-app.use("/api/carts",cartRoute)
+const cartRoute = require("./routes/cart");
+app.use("/api/carts", cartRoute);
 
 //? Order
-const orderRoute = require('./routes/order')
-app.use("/api/orders",orderRoute)
+const orderRoute = require("./routes/order");
+app.use("/api/orders", orderRoute);
 
 //? Stripe
-const stripeRoute = require('./routes/stripe')
-app.use("/api/checkout",stripeRoute)
+const stripeRoute = require("./routes/stripe");
+app.use("/api/checkout", stripeRoute);
 //!=============
 //*=======================
 
-app.listen(process.env.PORT || 5000, (req,res) => {
+app.listen(process.env.PORT || 5000, (req, res) => {
   console.log("Backend server is running");
-res.send("Api running")
+  res.json("Api running");
 });
