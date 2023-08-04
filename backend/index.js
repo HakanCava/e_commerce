@@ -48,6 +48,7 @@ app.use("/api/checkout",stripeRoute)
 //!=============
 //*=======================
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(process.env.PORT || 5000, (req,res) => {
   console.log("Backend server is running");
+res.send("Api running")
 });
