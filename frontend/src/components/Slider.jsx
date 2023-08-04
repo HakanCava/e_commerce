@@ -35,7 +35,8 @@ const Arrow = styled.div`
   right: ${(props) => props.direction === "right" && "10px"};
   cursor: pointer;
   opacity: 0.5;
-  z-index: 2;
+  // z-index: 2;
+  z-index: ${(props) => props.direction === "left" ? 2 : 3}; 
   &:hover{
     opacity: 0.8;
   };
@@ -95,12 +96,12 @@ const Button = styled.button`
 `;
 
 const Slider = () => {
-  const [slideIndex, setSlideIndex] = useState(0);
+  const [slideindex, setSlideindex] = useState(0);
   const handleClick = (direction) => {
     if (direction === "left") {
-      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : sliderItems.length - 1);
+      setSlideindex(slideindex > 0 ? slideindex - 1 : sliderItems.length - 1);
     } else {
-      setSlideIndex(slideIndex < sliderItems.length - 1 ? slideIndex + 1 : 0);
+      setSlideindex(slideindex < sliderItems.length - 1 ? slideindex + 1 : 0);
     }
   };
   return (
@@ -108,7 +109,7 @@ const Slider = () => {
       <Arrow direction="left" onClick={() => handleClick("left")}>
         <ArrowLeftOutlinedIcon />
       </Arrow>
-      <Wrapper slideindex={slideIndex}>
+      <Wrapper slideindex={slideindex}>
         {sliderItems.map((item) => (
           <Slide bg={item.bg} key={item.id}>
             <ImgContainer>

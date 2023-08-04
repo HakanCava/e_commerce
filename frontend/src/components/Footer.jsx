@@ -7,7 +7,7 @@ import RoomIcon from "@mui/icons-material/Room";
 import PhoneIcon from "@mui/icons-material/Phone";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import { ContainerFlex, Title } from "../styles";
-import { mobile, tablet, laptop, bigLaptop } from "../styles";
+import { mobile, tablet, laptop } from "../styles";
 
 const Container = styled.div`
   display: flex;
