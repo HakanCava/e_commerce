@@ -5,7 +5,7 @@ import Products from "../components/Products";
 import Newsletter from "../components/NewsLetter";
 import Footer from "../components/Footer";
 import { useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { tablet } from "../styles";
 
 const Container = styled.div``;
@@ -54,6 +54,10 @@ const ProductList = () => {
       [e.target.name]: value,
     });
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   return (
     <Container>
