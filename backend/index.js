@@ -50,5 +50,5 @@ app.use("/api/checkout", stripeRoute);
 
 app.listen(process.env.PORT || 5000, (req, res) => {
   console.log("Backend server is running");
-  res.json("Api running");
+  res.send("<h3>Api running</h3>");
 });
