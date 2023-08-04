@@ -6,13 +6,13 @@ import {
   Form,
   Input,
   Button,
-  Link,
   tablet,
   laptop,
 } from "../styles";
 import loginLogo from "../assets/login.svg";
 import { styled } from "styled-components";
 import useAuthCalls from "../hooks/useAuthCalls";
+import { Link } from "react-router-dom";
 
 const Container = styled(ContainerFlex)`
   width: 100vw;
@@ -58,9 +58,9 @@ const Login = () => {
             value={password}
           />
           <Button>LOGIN</Button>
-          <Link href="#">DO NOT YOU REMEMBER THE PASSWORD?</Link>
-          <Link href="/register">CREATE A NEW ACCOUNT</Link>
-          <Link href="/">CONTINUE WITHOUT A MEMBER</Link>
+          <Link to="#">DO NOT YOU REMEMBER THE PASSWORD?</Link>
+          <Link to="/register">CREATE A NEW ACCOUNT</Link>
+          <Link to="/">CONTINUE WITHOUT A MEMBER</Link>
         </Form>
       </WrapperLogin>
     </Container>

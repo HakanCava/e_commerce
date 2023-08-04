@@ -6,11 +6,11 @@ import {
   Title,
   Form,
   Button,
-  Link,
   mobile,
 } from "../styles";
 import registerLogo from "../assets/register.svg";
 import { styled } from "styled-components";
+import { Link } from "react-router-dom";
 
 import useAuthCalls from "../hooks/useAuthCalls";
 
@@ -95,12 +95,12 @@ const Register = () => {
         </Form>
         <ContLink>
           <Link
-            href="/login"
+            to="/login"
             style={{ textDecoration: "none", fontSize: "13px", color: "gray" }}
           >
             Have an account?
           </Link>
-          <Link href="/">CONTINUE WITHOUT A MEMBER</Link>
+          <Link to="/">CONTINUE WITHOUT A MEMBER</Link>
         </ContLink>
       </WrapperRegister>
     </Container>
