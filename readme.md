@@ -38,5 +38,10 @@
 - Stripe Checkout
 - React Toastify
 
-## Installation
+## Live:
+- Used render.com for backend
+- Used netlify.com for frontend
+- https://mybazaarcava.netlify.app/
+
+## Installation:
 - git clone https://github.com/HakanCava/e_commerce.git
